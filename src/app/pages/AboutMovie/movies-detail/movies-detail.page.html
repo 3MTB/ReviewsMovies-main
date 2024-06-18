@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="title-header"><strong>{{movie.title}}</strong></ion-title>
+    <ion-button [routerLink]="['/movies']" fill="clear" slot="start" class="back-button">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+      back
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-text-center">
+    <ion-card-header>
+      <ion-card-title class="card-title"><strong>{{movie.title}}</strong></ion-card-title>
+      <ion-card-subtitle class="card-subtitle">{{movie.adult ? "+18" : "Acto para todo público"}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="card-content-container">
+      <ion-img class="imgMovie" [src]="getImageUrl()"></ion-img>
+      <div class="content-details">
+      <br>
+      <ion-text class="text-content1"><strong>Título Original: </strong> {{movie.original_title}}</ion-text>
+      <br>
+      <h2 class="sinopsis"><strong>Sinopsis: <br></strong></h2>
+      <br>
+      <ion-text class="text-content2">{{movie.overview}}</ion-text>
+      <br/>
+      <ion-text class="text-content3"><strong>{{getGenres()}}</strong></ion-text>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

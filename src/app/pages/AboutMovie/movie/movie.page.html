@@ -1,0 +1,9 @@
+<ion-card button class="ion-text-center" [routerLink]="['detail', movie.id]">
+  <img class="card-img" alt="img of {{movie.title}}" [src]="getImageUrl()" />
+  <ion-card-header>
+    <ion-card-title>{{movie.title}}</ion-card-title>
+    <ion-note> {{movie.release_date| date : 'yyyy'}}</ion-note>
+    <br />
+    <ion-card-subtitle>{{genres}}</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>
